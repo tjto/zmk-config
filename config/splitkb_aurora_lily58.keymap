@@ -10,6 +10,19 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behaviors-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = "<&kp>,<&kp>";
+        }
+    }
+}
+
+/ {
     combos {
         compatible = "zmk,combos";
         combo_esc {
@@ -49,12 +62,15 @@
             bindings = <
 &kp GRAVE       &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                           &kp N6    &kp N7    &kp N8    &kp N9  &kp N0   &kp MINUS
 &kp TAB         &kp Q  &kp W  &kp E    &kp R    &kp T                            &kp Y     &kp U     &kp I     &kp O   &kp P    &kp BSLH
-&mt LALT ESC    &kp A  &kp S  &kp D    &ht_hp LSHFT F    &kp G                            &kp H     &ht_hp RSHIFT J     &kp K     &kp L   &kp SEMI &kp SQT
+&mt LALT ESC    &kp A  &kp S  &kp D    &kp F    &kp G                            &kp H     &kp J     &kp K     &kp L   &kp SEMI &kp SQT
 &mt LSHFT LPAR  &kp Z  &kp X  &kp C    &kp V    &kp B     &kp LBKT    &kp RBKT   &kp N     &kp M     &kp COMMA &kp DOT &kp FSLH &mt RSHIFT RPAR
                               &mo 2    &mo 1    &kp LGUI  &kp SPACE   &kp RET    &kp RGUI  &kp RCTRL &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            bindings = <
+                &hm LCTRL A &hm LGUI S &hm LALT D &hm LSHFT F
+            >;
         };
 
         lower_layer {
