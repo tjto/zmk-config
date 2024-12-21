@@ -10,19 +10,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&kp>;
-        }
-    }
-}
-
-/ {
     combos {
         compatible = "zmk,combos";
         combo_esc {
@@ -49,6 +36,17 @@
 };
 
 / {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
