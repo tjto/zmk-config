@@ -12,12 +12,12 @@
 / {
     behaviors {
         hm: homerow_mods {
-            compatible = "zmk,behaviors-hold-tap";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "hold-preferred";
-            bindings = "<&kp>,<&kp>";
+            bindings = <&kp>, <&kp>;
         }
     }
 }
@@ -69,9 +69,7 @@
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             bindings = <
-                &hm LCTRL A &hm LGUI S &hm LALT D &hm LSHFT F
-            >;
-        };
+                &hm LCTRL A &hm LGUI S &hm LALT D &hm LSHIFT F
 
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
