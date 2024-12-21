@@ -70,6 +70,8 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             bindings = <
                 &hm LCTRL A &hm LGUI S &hm LALT D &hm LSHIFT F
+            >;
+        };
 
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
