@@ -41,7 +41,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <125>;
+            quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -58,11 +59,11 @@
 // | SHIFT   |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //                    | RAISE | LOWER | GUI | SPACE |  | CTRL/RET | GUI | LOWER  |   =   |
             bindings = <
-&kp GRAVE       &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                           &kp N6    &kp N7    &kp N8    &kp N9  &kp N0   &kp MINUS
-&kp TAB         &kp Q  &kp W  &kp E    &kp R    &kp T                            &kp Y     &kp U     &kp I     &kp O   &kp P    &kp BSLH
-&mt LALT ESC    &rpi LCTRL A  &rpi LGUI S  &rpi LALT D    &rpi LSHFT F    &kp G                            &kp H     &rpi RSHIFT J     &rpi RALT K     &rpi RGUI L   &rpi RCTRL SEMI &kp SQT
-&mt LSHFT LPAR  &kp Z  &kp X  &kp C    &kp V    &kp B     &kp LBKT    &kp RBKT   &kp N     &kp M     &kp COMMA &kp DOT &kp FSLH &mt RSHIFT RPAR
-                              &mo 2    &mo 1    &kp LGUI  &kp SPACE   &kp RET    &kp RGUI  &kp RCTRL &kp EQUAL
+&kp GRAVE       &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                              &kp N6    &kp N7    &kp N8    &kp N9  &kp N0   &kp MINUS
+&kp TAB         &kp Q  &kp W  &kp E    &kp R    &kp T                               &kp Y     &kp U     &kp I     &kp O   &kp P    &kp BSLH
+&mt LALT ESC    &rpi LCTRL A  &rpi LGUI S  &rpi LALT D    &rpi LSHFT F    &kp G     &kp H     &rpi RSHIFT J     &rpi RALT K     &rpi RGUI L   &rpi RCTRL SEMI &kp SQT
+&mt LSHFT LPAR  &kp Z  &kp X  &kp C    &kp V    &kp B     &kp LBKT        &kp RBKT   &kp N     &kp M     &kp COMMA &kp DOT &kp FSLH &mt RSHIFT RPAR
+                              &mo 2    &mo 1    &kp LGUI  &kp SPACE       &kp RET    &kp RGUI  &kp RCTRL &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
