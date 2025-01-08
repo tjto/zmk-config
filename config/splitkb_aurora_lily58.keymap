@@ -32,9 +32,9 @@
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
 
-ZMK_COMBO(esc,&kp ESC,  LM1 LM2, ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(bspc,&kp BSPC,RM1 RM2, ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(del, &kp DEL, RM0 RM1, ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(esc,&kp ESC,  LM1 LM2, ALL, COMBO_TERM_SLOW, COMBO_IDLE_FAST)
+ZMK_COMBO(bspc,&kp BSPC,RM1 RM2, ALL, COMBO_TERM_SLOW, COMBO_IDLE_FAST)
+ZMK_COMBO(del, &kp DEL, RM0 RM1, ALL, COMBO_TERM_SLOW, COMBO_IDLE_FAST)
 
 /* left-hand HRMs */
 ZMK_HOLD_TAP(hml,
@@ -82,9 +82,9 @@ ZMK_LAYER(default_layer,
 ZMK_LAYER(lower_layer,
     &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &kp BSPC
     &kp F1     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &kp F8    &kp F9          &kp F10   &kp F11   &kp F12
-    &kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    &kp CARET &kp AMPS  &kp STAR         &kp LPAR  &kp RPAR  &kp TILDE
+    &kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    &kp CARET &kp AMPS  &kp STAR        &kp LPAR  &kp RPAR  &kp TILDE
     &trans     &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &trans       &trans    &trans   &trans    &trans    &kp MINUS &kp PLUS        &kp LBRC  &kp RBRC  &kp PIPE
-                                                  &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans
+                                                  &trans            &trans       &trans    &trans   &kp BSPC  &trans    &trans    &trans
 )
 
 // ------------------------------------------------------------------------------------------------------------
@@ -98,5 +98,5 @@ ZMK_LAYER(raise_layer,
     &kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9    &kp N0    &trans
     &kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
     &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH
-                            &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
+                            &trans  &trans  &trans    &kp BSPC &trans    &trans      &trans    &trans
 )
