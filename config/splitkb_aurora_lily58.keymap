@@ -100,4 +100,3 @@ ZMK_LAYER(raise_layer,
     &trans    &trans    &trans    &trans     &trans   &trans   &trans    &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH
                                   &trans     &trans   &trans   &kp BSPC  &trans    &trans      &trans    &trans
 )
-=]\\\\\.....\\\\\>>>>>\\\
