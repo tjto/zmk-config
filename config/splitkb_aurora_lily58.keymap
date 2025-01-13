@@ -97,7 +97,7 @@ ZMK_LAYER(lower_layer,
 ZMK_LAYER(raise_layer,
     &kp F1    &kp F2    &kp F3    &kp F4     &kp F5   &kp F6                       &kp F7      &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
     &kp GRAVE &kp N1    &kp N2    &kp N3     &kp N4   &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9    &kp N0    &trans
-    &sv_ae    &sv_oe    &sv_ao    &trans     &trans   &trans                       &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
+    &trans    &sv_ae    &sv_ao    &sv_oe     &trans   &trans                       &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
     &trans    &trans    &trans    &trans     &trans   &trans   &trans    &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH
                                   &trans     &trans   &trans   &kp BSPC  &trans    &trans      &trans    &trans
 )
