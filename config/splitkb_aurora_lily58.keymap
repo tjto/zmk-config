@@ -33,6 +33,9 @@
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
 
+
+ZMK_COMBO(esc,&kp ESC,  RH1 LH1, ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
 /* left-hand HRMs */
 ZMK_HOLD_TAP(hml,
     flavor = "balanced";
